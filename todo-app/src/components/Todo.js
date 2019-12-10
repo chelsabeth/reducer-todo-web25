@@ -1,4 +1,5 @@
 import React from "react";
+import "../../src/App.css";
 
 const Todo = ({ item, id, completed, toggleTodo }) => {
   return (

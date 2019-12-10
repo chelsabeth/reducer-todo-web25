@@ -20,6 +20,17 @@ export const initialState = {
 
 export const reducer = (state, action) => {
   switch (action.type) {
+    case "TOGGLE_TODO":
+      return {
+        ...state,
+        todos: state.todos.map(item => {
+          if (item.id === action.payload) {
+            return { ...item, completed: !item.completed };
+          } else {
+            return item;
+          }
+        })
+      };
   }
   return state;
 };

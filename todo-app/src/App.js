@@ -6,12 +6,16 @@ import './App.css';
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [todoState, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const toggleTodo = id => {
+    dispatch({ type: "TOGGLE_TODO", payload: id });
+  }
 
   return (
     <div className="App">
       <h1>Another ToDo App!</h1>
-      <TodoList {...todoState}/>
+      <TodoList {...state} toggleTodo={toggleTodo}/>
     </div>
   );
 }
