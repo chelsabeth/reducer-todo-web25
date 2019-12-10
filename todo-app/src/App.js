@@ -17,11 +17,16 @@ function App() {
     dispatch({ type: "ADD_TODO", payload: todoName })
   }
 
+  const clearCompleted = e => {
+    e.preventDefault();
+    dispatch({ type: "CLEAR_COMPLETED" });
+  }
+
   return (
     <div className="App">
       <h1>Another ToDo App!</h1>
       <TodoList {...state} toggleTodo={toggleTodo}/>
-      <TodoForm addTodo={addTodo} />
+      <TodoForm addTodo={addTodo} clearCompleted={clearCompleted}/>
     </div>
   );
 }
