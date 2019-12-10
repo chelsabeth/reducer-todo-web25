@@ -31,6 +31,14 @@ export const reducer = (state, action) => {
           }
         })
       };
+
+      case "ADD_TODO": 
+      const newTodo = {
+          item: action.payload,
+          completed: false,
+          id: Date.now()
+      };
+      return { ...state, todos: [...state.todos, newTodo] };
   }
   return state;
 };

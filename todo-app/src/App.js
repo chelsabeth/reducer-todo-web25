@@ -4,6 +4,7 @@ import './App.css';
 
 // Components
 import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -12,10 +13,15 @@ function App() {
     dispatch({ type: "TOGGLE_TODO", payload: id });
   }
 
+  const addTodo = todoName => {
+    dispatch({ type: "ADD_TODO", payload: todoName })
+  }
+
   return (
     <div className="App">
       <h1>Another ToDo App!</h1>
       <TodoList {...state} toggleTodo={toggleTodo}/>
+      <TodoForm addTodo={addTodo} />
     </div>
   );
 }
