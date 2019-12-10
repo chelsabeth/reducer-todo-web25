@@ -1,22 +1,25 @@
-export const initialState = [
+export const initialState = {
+  todos: [
     {
-        item: "learn about reducers",
-        completed: false,
-        id: 1
+      item: "learn about reducers",
+      completed: false,
+      id: 1
     },
     {
-        item: "code some more",
-        completed: false,
-        id: 2
+      item: "code some more",
+      completed: false,
+      id: 2
     },
     {
-        item: "workout",
-        completed: false,
-        id: 3
+      item: "workout",
+      completed: false,
+      id: 3
     }
-]
+  ]
+};
 
 export const reducer = (state, action) => {
-
-    return state;
-}
+  switch (action.type) {
+  }
+  return state;
+};
