@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-
 /* MY CSS */
 
-.itemcompleted { /* coming from Todo.js */
+.itemcompleted {
+  /* coming from Todo.js */
   text-decoration: line-through;
 }
