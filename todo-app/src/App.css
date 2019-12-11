@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+/* MY CSS */
+
+.itemcompleted {
+  /* coming from Todo.js */
+  text-decoration: line-through;
+}
+
+body {
+  background: grey;
+  color: white;
+}
